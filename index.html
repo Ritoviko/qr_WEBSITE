@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!-- <script src="JSS/mainpage.js">
+    </script> -->
+</head>
+<body>
+    <header>
+        <div class="logo" id="logo"><a href="#">QR</a></div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">COLLEGE</a></li>
+                <li><a href="Login.html">LOGIN</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <form class="main">
+      <div id="main">
+        <h1>Enter these values for QR code</h1>
+        <div id="main-data1">
+            <label>BRANCH</label>
+            <input list="branches" placeholder="Select" id="br" /required>
+            <datalist id="branches">
+                <option value="BCA">
+                <option value="BBA">
+                <option value="B Tech">
+                <option value="MCA">
+                <option value="MBA">
+            </datalist>
+            <span id="br_button">&#10003;</span>
+        </div>
+        <div id="main-data2">
+            <label>YEAR</label>
+            <input list="years" placeholder="Select" type="number" min="1" max="4" id="yr" /required>
+            <datalist id="years">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+            </datalist>
+            <span id="yr_button">&#10003;</span>
+        </div>
+        <div id="main-data3">
+            <label>SEMESTER</label>
+            <input list="sems" placeholder="Select" type="number" min="1" max="8" id="se" /required>
+            <datalist id="sems">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+                <option value="7">
+                <option value="8">
+            </datalist>
+            <span id="se_button">&#10003;</span>
+        </div>
+        <div id="main-data4">
+            <label>SUBJECTS</label>
+            <input list="subs" placeholder="Select" id="su" /required>
+            <datalist id="subs">
+              <option value="OOPS using Java">
+              <option value="CD">
+              <option value="CGM">
+              <option value="DD & CA">
+              <option value="ADS">
+              <option value="AOT">
+              <option value="ADS & DW">
+              <option value="CN & DS">
+              <option value="SE">
+              <option value="OS">
+            </datalist>
+            <span id="su_button">&#10003;</span>
+        </div>
+        <button id="main-button" type="button">GENERATE</button>
+      </div>
+    </form>
+    <footer>
+        <div id="footer" class="footer0">
+          <h1>QR WEBSITE</h1>
+        </div>
+        <div class="footer1 ">
+          Connect with us at<div class="social-media">
+            <a href="www.facebook.com" id="fb">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="www.linkedin.com" id="linkedin">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="www.youtube.com">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+            <a href="www.instagram.com" id="ig">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="www.twitter.com" id="tw">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </div>
+        </div>
+        <div class="footer2">
+          <div class="product">
+            <div class="heading">Get Our app</div>
+            <div class="div">Ios</div>
+            <div class="div">Andoid</div>
+            <div class="div">PC</div>
+            <div class="div">Mac</div>
+    
+          </div>
+          <div class="services">
+            <div class="heading">Content</div>
+            <div class="div">Add a subject</div>
+            <div class="div">Delete a subject</div>
+          </div>
+          <div class="Company">
+            <div class="heading">Company</div>
+            <div class="div">Complaint</div>
+            <div class="div">Careers</div>
+            <div class="div">Support</div>
+          </div>
+          <div class="Get Help">
+            <div class="heading">Get Help</div>
+            <div class="div">Help Center</div>
+            <div class="div">Privacy Policy</div>
+            <div class="div">Terms</div>
+          </div>
+        </div>
+        <div class="footer3">Copyright © <h4>MCASAITM</h4> 2024-2026</div>
+      </footer>
+
+      <div class="popup">
+        <span>&times;</span>
+        <img src="QR.png" alt="">
+      </div>
+
+      <script>
+
+        document.querySelector('#br_button').onclick = () =>{
+          if((document.querySelector('#br').value == 'BCA')||(document.querySelector('#br').value == 'BBA')||(document.querySelector('#br').value == 'B Tech')||(document.querySelector('#br').value == 'MCA')||(document.querySelector('#br').value == 'MBA')){
+          document.querySelector('#main-data2').style.display = 'table-row';
+          document.querySelector('#main-data2 label').style.width = '178px';
+          document.querySelector('#br_button').style.backgroundColor = 'rgb(96, 255, 118)';
+        }else{
+          document.querySelector('#main-data2').style.display = 'none';
+        }
+      }
+
+        document.querySelector('#yr_button').onclick = () =>{
+          if((document.querySelector('#yr').value == 1)||(document.querySelector('#yr').value == 2)||(document.querySelector('#yr').value == 3)||(document.querySelector('#yr').value == 4)){
+            document.querySelector('#main-data3').style.display = 'table-row';
+            document.querySelector('#main-data3').min = '1';
+            document.querySelector('#main-data3').max = '2';
+            document.querySelector('#yr_button').style.backgroundColor = 'rgb(96, 255, 118)';
+            
+          }else{
+            document.querySelector('#main-data3').style.display = 'none';
+          }  
+        }
+
+        document.querySelector('#se_button').onclick = () =>{
+          if((document.querySelector('#se').value == 1)||(document.querySelector('#se').value == 2)||(document.querySelector('#se').value == 3)||(document.querySelector('#se').value == 4)||(document.querySelector('#se').value == 5)||(document.querySelector('#se').value == 6)||(document.querySelector('#se').value == 7)||(document.querySelector('#se').value == 8)){
+            document.querySelector('#main-data4').style.display = 'table-row';
+            document.querySelector('#se_button').style.backgroundColor = 'rgb(96, 255, 118)';
+            
+            
+          }else{
+            document.querySelector('#main-data4').style.display = 'none';
+          }
+        }
+
+        document.querySelector('#su_button').onclick = () =>{
+          if((document.querySelector('#su').value == 'OOPS using Java')||(document.querySelector('#su').value == 'CD')||(document.querySelector('#su').value == 'CGM')||(document.querySelector('#su').value == 'DD & CA')||(document.querySelector('#su').value == 'ADS')||(document.querySelector('#su').value == 'AOT')||(document.querySelector('#su').value == 'ADS & DW')||(document.querySelector('#su').value == 'CN & DS')||(document.querySelector('#su').value == 'SE')||(document.querySelector('#su').value == 'OS')){
+            document.querySelector('#main-button').style.display = 'block';
+            document.querySelector('#su_button').style.backgroundColor = 'rgb(96, 255, 118)';
+            
+            
+          }else{
+            document.querySelector('#main-button').style.display = 'none';
+          }
+        }
+
+        document.querySelector('.main button').onclick = () =>{
+          document.querySelector('.popup').style.display = 'block';
+          document.querySelector('#main button').style.backgroundColor = 'rgb(96, 255, 118)';
+          document.querySelector('#main button').innerHTML = 'Refresh the page';
+        }
+
+        document.querySelector('.popup span').onclick = () =>{
+          document.querySelector('.popup').style.display = 'none';
+
+          
+          
+          
+          
+        }
+      </script>
+</body>
+</html>
